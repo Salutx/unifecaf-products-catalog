@@ -8,6 +8,7 @@ import Styles from "./Input.styles";
 import { InputProps } from "./Input.types";
 
 // UI Components
+import { MaterialIcons } from "@expo/vector-icons";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 
 const Input = ({
@@ -41,7 +42,11 @@ const Input = ({
         {/* Password View */}
         {secureTextEntry && (
           <TouchableOpacity onPress={handleTogglePasswordView}>
-            <Text>{showPassword ? "Ocultar" : "Ver"}</Text>
+            <MaterialIcons
+              name={showPassword ? "visibility" : "visibility-off"}
+              size={20}
+              color="#656565"
+            />
           </TouchableOpacity>
         )}
       </View>

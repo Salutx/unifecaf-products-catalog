@@ -1,1 +1,3 @@
-export interface ProductScreenProps {}
+export interface ProductScreenProps {
+  productId: number;
+}

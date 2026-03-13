@@ -41,7 +41,11 @@ const Styles = StyleSheet.create({
     fontWeight: "600",
     color: "#13281F",
   },
-  HeaderLogout: {},
+  HeaderLogout: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 8,
+  },
   HeaderLogoutText: {
     fontSize: 12,
     fontWeight: "600",

@@ -1,9 +1,12 @@
+import { DummyProduct } from "@/global/types/DummyAPI.types";
+
 export interface HomeContextProps {
   selectedCategoryGender: CategoryGender;
   handleSelectCategoryGender: (categoryGender: CategoryGender) => void;
   selectedCategory: CategoryType;
   handleSelectCategory: (categoryKey: CategoryType) => void;
   categoriesByGender: CategoryItem[];
+  handleSelectProduct: (product: DummyProduct) => void;
 }
 
 export interface HomeProviderProps {

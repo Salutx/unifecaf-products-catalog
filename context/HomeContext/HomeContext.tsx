@@ -1,7 +1,11 @@
 // React
 import { createContext, useMemo, useState } from "react";
 
+// Expo Router
+import { useRouter } from "expo-router";
+
 // Types and Constants
+import { DummyProduct } from "@/global/types/DummyAPI.types";
 import { getCategoriesByGender } from "./HomeContext.constants";
 import {
   CategoryGender,
@@ -18,6 +22,9 @@ export const HomeContext = createContext<HomeContextProps>(
 
 // Provider
 export const HomeProvider = ({ children }: HomeProviderProps) => {
+  // Router
+  const router = useRouter();
+
   // States
   const [selectedCategoryGender, setSelectedCategoryGender] =
     useState<CategoryGender>("men");
@@ -51,6 +58,14 @@ export const HomeProvider = ({ children }: HomeProviderProps) => {
     });
   };
 
+  // Handle Select Product
+  const handleSelectProduct = (product: DummyProduct) => {
+    router.push({
+      pathname: "/product/[id]",
+      params: { id: product.id },
+    });
+  };
+
   return (
     <HomeContext.Provider
       value={{
@@ -59,6 +74,7 @@ export const HomeProvider = ({ children }: HomeProviderProps) => {
         selectedCategoryGender,
         handleSelectCategoryGender,
         categoriesByGender,
+        handleSelectProduct,
       }}
     >
       {children}

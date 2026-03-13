@@ -10,24 +10,36 @@ import useHomeContext from "@/hooks/useHomeContext";
 
 // UI Components
 import Product from "@/components/Product";
-import { ScrollView } from "react-native";
+import { ActivityIndicator, FlatList, View } from "react-native";
 
 const HomeProducts = (props: HomeProductsProps) => {
   // Home Context
-  const { selectedCategory } = useHomeContext();
+  const { selectedCategory, handleSelectProduct } = useHomeContext();
 
-  const { data: category } = useGetProductsByCategory(selectedCategory);
+  const { data: category, isLoading } =
+    useGetProductsByCategory(selectedCategory);
+
+  if (isLoading) {
+    return (
+      <View style={Styles.LoadingContainer}>
+        <ActivityIndicator size="large" color="#00BD6B" />
+      </View>
+    );
+  }
 
   return (
-    <ScrollView
-      horizontal
+    <FlatList
       style={Styles.HomeProducts}
-      showsHorizontalScrollIndicator={false}
-    >
-      {category?.products?.map((product) => (
-        <Product key={product.id} data={product} onPress={() => {}} />
-      ))}
-    </ScrollView>
+      data={category?.products}
+      showsVerticalScrollIndicator={false}
+      numColumns={2}
+      keyExtractor={(item) => item.id.toString()}
+      contentContainerStyle={{ gap: 8 }}
+      columnWrapperStyle={{ gap: 8 }}
+      renderItem={({ item }) => (
+        <Product data={item} onPress={() => handleSelectProduct(item)} />
+      )}
+    />
   );
 };
 

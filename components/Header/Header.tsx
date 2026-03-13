@@ -8,6 +8,7 @@ import { HeaderProps } from "./Header.types";
 import useAuthContext from "@/hooks/useAuthContext";
 
 // UI Components
+import { MaterialIcons } from "@expo/vector-icons";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 
 // Assets
@@ -21,7 +22,9 @@ const Header = (props: HeaderProps) => {
     <View style={Styles.Header}>
       {/* Header Side */}
       <View style={Styles.HeaderSide}>
+        {/* Header User */}
         <View style={Styles.HeaderUser}>
+          {/* Header User Avatar */}
           <View style={Styles.HeaderUserAvatar}>
             <Text style={Styles.HeaderUserAvatarLabels}>LM</Text>
           </View>
@@ -43,6 +46,7 @@ const Header = (props: HeaderProps) => {
           onPress={logout}
         >
           <Text style={Styles.HeaderLogoutText}>Sair</Text>
+          <MaterialIcons name="exit-to-app" size={20} color={"#00BD6B"} />
         </TouchableOpacity>
       </View>
     </View>
