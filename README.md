@@ -1,50 +1,29 @@
-# Welcome to your Expo app 👋
+# Product Catalog Application
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The project consists of creating an application using React Native (Expo) and Axios, developed by UniFecaf college. Additionally used <a href="https://tanstack.com/query"><code>@tanstack/react-query</code></a> for query manipulation and state management (e.g. loading and caching).
 
-## Get started
+#### HOW TO EXECUTE
 
-1. Install dependencies
+1. <strong>Install the dependencies</strong>: <code>npm install</code>
+2. <strong>Run the project</strong>: <code>npm run start</code>
+3. <strong>Open the project</strong>: Scan the QR code with <a href="https://expo.dev/go">Expo Go</a>.
+4. <strong>Authentication</strong>: Log in using the masked credentials at <a href="./context/AuthContext/AuthContext.constants.ts">AuthContext Constants</a>.
 
-   ```bash
-   npm install
-   ```
+#### DEPENDENCIES
 
-2. Start the app
+- React Native (Expo);
+- React Tanstack Query;
+- Axios;
 
-   ```bash
-   npx expo start
-   ```
+<hr>
 
-In the output, you'll find options to open the app in a
+#### PREVIEW
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+<img src="./preview/login-page.jpeg" alt="Login Page" width="200px" />
+<img src="./preview/products.jpeg" alt="Products Page" width="200px" />
+<img src="./preview/product-detail.jpeg" alt="Product Detail Page" width="200px" />
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+#### COPYRIGHT
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Project developed exclusively by <br/>
+<strong>Salutx.</strong>, Lucas Matos.
