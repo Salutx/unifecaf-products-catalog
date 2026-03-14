@@ -19,9 +19,13 @@ The project consists of creating an application using React Native (Expo) and Ax
 
 #### PREVIEW
 
+<div>
 <img src="./preview/login-page.jpeg" alt="Login Page" width="200px" />
 <img src="./preview/products.jpeg" alt="Products Page" width="200px" />
 <img src="./preview/product-detail.jpeg" alt="Product Detail Page" width="200px" />
+<div>
+
+<hr>
 
 #### COPYRIGHT
 
